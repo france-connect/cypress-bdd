@@ -2,7 +2,7 @@
   "filterSpecs": true,
   "omitFiltered": true,
   "stepDefinitions": [
-    "cypress/support/steps/*.ts"
+    "cypress/support/steps/*/*.ts"
   ],
   "json": {
     "enabled": true,

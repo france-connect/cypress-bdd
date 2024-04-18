@@ -1,7 +1,7 @@
 import { Before } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getDefaultUser } from '../helpers';
-import { User } from '../types';
+import { getDefaultUser } from '../../helpers';
+import { User } from '../../types';
 
 Before(function () {
   const testEnv: string = Cypress.env('TEST_ENV');

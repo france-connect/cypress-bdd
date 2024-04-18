@@ -1,6 +1,6 @@
 import { User } from '../types';
 
-const DEFAULT_USER_DESC = 'standard';
+const DEFAULT_USER_DESC = 'default';
 
 export const getUserByDescription = (
   users: User[],

@@ -9,9 +9,9 @@ export default defineConfig({
   video: false,
   e2e: {
     // main website url
-    baseUrl: 'https://www.saucedemo.com',
+    baseUrl: 'https://automationintesting.online',
     // cucumber feature file pattern
-    specPattern: 'cypress/e2e/*.feature',
+    specPattern: 'cypress/e2e/**/*.feature',
     // extra plugins and custom commands
     supportFile: 'cypress/support/index.ts',
     // experimental cypress features
