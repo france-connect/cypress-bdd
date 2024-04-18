@@ -8,7 +8,8 @@
     "Typescript"
   ],
   "scripts": {
-    "clean": "rm -rf cypress/reports && rm -rf cypress/screenshots && rm -rf cypress/videos",
+    "clean": "yarn clean:diff && rm -rf cypress/reports && rm -rf cypress/screenshots && rm -rf cypress/videos",
+    "clean:diff": "rm -rf cypress/snapshots/diff",
     "prettier": "prettier -c \"{.,cypress,scripts}/**/*.ts\"",
     "lint": "eslint \"{.,cypress,scripts}/**/*.ts\"",
     "cy:open": "cypress open --e2e",
@@ -16,12 +17,15 @@
     "cy:run:chrome": "yarn cy:run --browser chrome",
     "cy:run:firefox": "yarn cy:run --browser firefox",
     "cy:run:edge": "yarn cy:run --browser edge",
-    "cy:run-all": "yarn cy:run:chrome && yarn cy:run:firefox && cy:run:edge"
+    "cy:run-all": "yarn cy:run:chrome && yarn cy:run:firefox && cy:run:edge",
+    "cy:visual": "yarn clean:diff && yarn cy:run --env 'TAGS=@visual and not @ignore'",
+    "cy:visual:update": "yarn cy:run --env 'TAGS=@visual and not @ignore,updateSnapshots=true'"
   },
   "author": "Nicolas Legeay",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@simonsmith/cypress-image-snapshot": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
     "axe-core": "^4.9.0",

@@ -25,6 +25,7 @@ export default defineConfig({
   // environment variables
   env: {
     TEST_ENV: 'dev',
+    TAGS: 'not @ignore and not @visual',
     // Skip accessibility failures
     A11Y_SKIP_FAILURES: true,
   },
