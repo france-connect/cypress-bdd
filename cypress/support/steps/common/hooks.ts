@@ -15,4 +15,7 @@ Before(function () {
   cy.get<User[]>('@users').then((users) => {
     this.user = getDefaultUser(users);
   });
+
+  // Hide website banner at test launch
+  cy.setCookie('banner', 'true');
 });

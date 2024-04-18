@@ -2,6 +2,7 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 
+import 'cypress-axe';
 import 'cypress-plugin-api';
 
 // Import all custom types

@@ -2,11 +2,18 @@ import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-prepro
 import { createEsbuildPlugin } from '@badeball/cypress-cucumber-preprocessor/esbuild';
 import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
 
+import { log, table } from './console-log-plugin';
+
 const pluginConfig = async (
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions,
 ): Promise<Cypress.PluginConfigOptions> => {
   await addCucumberPreprocessorPlugin(on, config);
+
+  on('task', {
+    log,
+    table,
+  });
 
   on(
     'file:preprocessor',
