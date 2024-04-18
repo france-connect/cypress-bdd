@@ -1,0 +1,17 @@
+{
+  "login": {
+    "body": {
+      "username":"admin",
+      "password":"password"
+    },
+    "method": "POST",
+    "url": "https://automationintesting.online/auth/login"
+  },
+  "validate": {
+    "body": {
+      "token": "2Wx2J6EBaVZzED2c"
+    },
+    "method": "POST",
+    "url": "https://automationintesting.online/auth/validate"
+  }
+}

@@ -2,5 +2,7 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 
+import 'cypress-plugin-api';
+
 // Import all custom types
-import * as types from './types';
+import * as _types from './types';

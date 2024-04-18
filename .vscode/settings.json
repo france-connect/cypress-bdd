@@ -2,7 +2,7 @@
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "cucumberautocomplete.customParameters": [],
-  "cucumberautocomplete.steps": ["cypress/support/**/steps/*.ts"],
+  "cucumberautocomplete.steps": ["cypress/support/steps/*/*.ts"],
   "cucumberautocomplete.strictGherkinCompletion": false,
   "cucumberautocomplete.formatConfOverride": {
     "Fonctionnalité": 0,
