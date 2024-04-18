@@ -7,9 +7,5 @@
   "json": {
     "enabled": true,
     "output": "cypress/reports/cucumber/cucumber-report.json"
-  },
-  "messages": {
-    "enabled": true,
-    "output": "cypress/reports/cucumber/cucumber-messages.ndjson"
   }
 }

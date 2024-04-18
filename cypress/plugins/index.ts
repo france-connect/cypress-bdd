@@ -25,19 +25,25 @@ const pluginConfig = async (
     }),
   );
 
-  on('before:browser:launch', (browser, launchOptions) => {
-    if (browser.name === 'electron') {
-      // Use larger headless screen size to support all viewports
-      launchOptions.preferences.width = 1440;
-      launchOptions.preferences.height = 1200;
-      launchOptions.preferences.webPreferences = {
-        spellcheck: false,
-      };
-    }
-    return launchOptions;
-  });
+  // cypress-image-snapshot plugin is overriding the 'after:screenshot' handler.
+  // It should be added only for visual test execution
+  // Otherwise we would not retrieve the screenshots in the cucumber report.
+  const isVisualTestRun = config.env['TAGS'] === '@visual and not @ignore';
+  if (isVisualTestRun) {
+    on('before:browser:launch', (browser, launchOptions) => {
+      if (browser.name === 'electron') {
+        // Use larger headless screen size to support all viewports
+        launchOptions.preferences.width = 1440;
+        launchOptions.preferences.height = 1200;
+        launchOptions.preferences.webPreferences = {
+          spellcheck: false,
+        };
+      }
+      return launchOptions;
+    });
 
-  addMatchImageSnapshotPlugin(on);
+    addMatchImageSnapshotPlugin(on);
+  }
 
   return config;
 };
