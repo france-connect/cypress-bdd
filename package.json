@@ -1,5 +1,8 @@
 {
   "name": "cypress-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
   "description": "Framework de test pour Cypress et Cucumber",
   "keywords": [
     "Cypress",
@@ -7,6 +10,9 @@
     "Cucumber",
     "Typescript"
   ],
+  "os": [
+    "linux"
+    ],
   "scripts": {
     "clean": "yarn clean:diff && rm -rf cypress/reports && rm -rf cypress/screenshots && rm -rf cypress/videos",
     "clean:diff": "rm -rf cypress/snapshots/diff",
@@ -17,7 +23,7 @@
     "cy:run:chrome": "yarn cy:run --browser chrome",
     "cy:run:firefox": "yarn cy:run --browser firefox",
     "cy:run:edge": "yarn cy:run --browser edge",
-    "cy:run-all": "yarn cy:run:chrome && yarn cy:run:firefox && cy:run:edge",
+    "cy:run-all": "yarn cy:run:chrome && yarn cy:run:firefox && yarn cy:run:edge",
     "cy:visual": "yarn clean:diff && yarn cy:run --env 'TAGS=@visual and not @ignore'",
     "cy:visual:update": "yarn cy:run --env 'TAGS=@visual and not @ignore,updateSnapshots=true'",
     "report": "ts-node ./scripts/multiple-cucumber-html-reporter"
