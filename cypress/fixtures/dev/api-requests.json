@@ -1,8 +1,8 @@
 {
   "login": {
     "body": {
-      "username":"admin",
-      "password":"password"
+      "username": "admin",
+      "password": "password"
     },
     "method": "POST",
     "url": "https://automationintesting.online/auth/login"

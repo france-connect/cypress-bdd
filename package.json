@@ -12,12 +12,12 @@
   ],
   "os": [
     "linux"
-    ],
+  ],
   "scripts": {
     "clean": "yarn clean:diff && rm -rf cypress/reports && rm -rf cypress/screenshots && rm -rf cypress/videos",
     "clean:diff": "rm -rf cypress/snapshots/diff",
-    "prettier": "prettier -c \"{.,cypress,scripts}/**/*.ts\"",
-    "lint": "eslint \"{.,cypress,scripts}/**/*.ts\"",
+    "prettier": "prettier -c \"{.,cypress,scripts}/**/*.{ts,js,json}\"",
+    "lint": "eslint \"{.,cypress,scripts}/**/*.{ts,js}\"",
     "cy:open": "cypress open --e2e",
     "cy:run": "cypress run --e2e --headless",
     "cy:run:chrome": "yarn cy:run --browser chrome",
