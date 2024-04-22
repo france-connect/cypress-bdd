@@ -1,6 +1,6 @@
 # Création du framework de test à partir de zéro
 
-Ce document présente les grandes étapes pour mettre au point le framework Cypress pour les tests BDD.
+Cette page présente les grandes étapes pour mettre au point le framework Cypress pour les tests BDD.
 
 # Etape 1: Installation de Cucumber Preprocessor pour Cypress
 

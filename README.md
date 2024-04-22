@@ -15,11 +15,11 @@
 
 ## Introduction
 
-Ce projet présente une implémentation du **framework de test BDD pour Cypress avec Typescript**.
+Ce projet présente le **framework de test BDD pour Cypress avec Typescript** utilisé par l'équipe [FranceConnect (DINUM)](https://franceconnect.gouv.fr).
 
 BDD signifie **Behavior Driven Development**. Il s'agît de décrire une fonctionnalité (feature en anglais) en un ensemble de scénarios.
 
-Ces scénarios sont décris en utilisant le langage **Gherkin** (ici en français). **Cucumber** permet de faire le lien entre les étapes des scénarios et le code **Typescript**.
+Ces scénarios sont décrits en utilisant le langage **Gherkin** (ici en français). **Cucumber** permet de faire le lien entre les étapes des scénarios et le code **Typescript**.
 
 Ce code est composé de **page objects** (encapsulant les sélecteurs CSS et actions UI) et d'utilitaires **Cypress**.
 
@@ -27,8 +27,8 @@ Pour l'exécution des tests, nous utilisons un **préprocesseur Cucumber**, qui 
 
 Ce projet présente différents types de test:
 
-| Type de tests         | Répertoire                                     |
-| --------------------- | ---------------------------------------------- |
+| Types de test         | Répertoire                                    |
+| --------------------- | --------------------------------------------- |
 | tests BDD             | [./cypress/e2e/bdd](./cypress/e2e/bdd/)       |
 | tests API             | [./cypress/e2e/api](./cypress/e2e/api/)       |
 | tests d'accessibilité | [./cypress/e2e/a11y](./cypress/e2e/a11y/)     |
@@ -36,16 +36,16 @@ Ce projet présente différents types de test:
 
 ## Structure du framework
 
-| Elément                     | Répertoire                                             |
-| --------------------------- | ------------------------------------------------------ |
-| Fonctionnalités (Scenarios) | [./cypress/e2e](./cypress/e2e)                         |
-| Jeux de données             | [./cypress/fixtures](./cypress/fixtures)               |
-| Etapes (Steps)              | [./cypress/support/steps](./cypress/support/steps)     |
-| Objets Page (Pages)         | [./cypress/support/pages](./cypress/support/pages)     |
-| Contexte (Types)             | [./cypress/support/types](./cypress/support/types)     |
-| Utilitaires (Helpers)       | [./cypress/support/helpers](./cypress/support/helpers) |
-| Plugins Cypress             | [./cypress/plugins](./cypress/plugins)                 |
-| Snapshots (pour les tests visuels)                  | [./cypress/snapshots](./cypress/snapshots)             |
+| Elément                            | Répertoire                                             |
+| ---------------------------------- | ------------------------------------------------------ |
+| Fonctionnalités (Scenarios)        | [./cypress/e2e](./cypress/e2e)                         |
+| Jeux de données                    | [./cypress/fixtures](./cypress/fixtures)               |
+| Etapes (Steps)                     | [./cypress/support/steps](./cypress/support/steps)     |
+| Objets Page (Pages)                | [./cypress/support/pages](./cypress/support/pages)     |
+| Contexte (Types)                   | [./cypress/support/types](./cypress/support/types)     |
+| Utilitaires (Helpers)              | [./cypress/support/helpers](./cypress/support/helpers) |
+| Plugins Cypress                    | [./cypress/plugins](./cypress/plugins)                 |
+| Snapshots (pour les tests visuels) | [./cypress/snapshots](./cypress/snapshots)             |
 
 ### Schéma
 
@@ -104,7 +104,7 @@ flowchart TD
 | Script                  | Description                                            |
 | ----------------------- | ------------------------------------------------------ |
 | `yarn install`          | Installer Cypress et ses dépendences                   |
-| `yarn clean`            | Supprimer les artifacts de test                           |
+| `yarn clean`            | Supprimer les artifacts de test                        |
 | `yarn clean:diff`       | Supprimer les snapshots en différence                  |
 | `yarn prettier`         | Formatter le code des tests                            |
 | `yarn lint`             | Vérifier le style du code des tests                    |
@@ -127,7 +127,7 @@ flowchart TD
 
 ## Remerciements
 
-- Merci à [Jonas Amundsen](https://github.com/badeball) pour la maintenance du projet Cypress Cucumber Preprocessor
+- Merci à [Jonas Amundsen](https://github.com/badeball) pour la maintenance du projet [Cypress Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
 - Merci à l'équipe de Automation In Testing pour le site de démo [Restful Booker Platform](https://automationintesting.online/)
 
 ## Licence
