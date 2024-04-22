@@ -1,0 +1,58 @@
+{
+  "name": "cypress-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Framework de test pour Cypress et Cucumber",
+  "keywords": [
+    "Cypress",
+    "QA",
+    "Cucumber",
+    "Typescript"
+  ],
+  "os": [
+    "linux"
+  ],
+  "scripts": {
+    "clean": "yarn clean:diff && rm -rf cypress/reports && rm -rf cypress/screenshots && rm -rf cypress/videos",
+    "clean:diff": "rm -rf cypress/snapshots/diff",
+    "prettier": "prettier -c \"{.,cypress,scripts}/**/*.{ts,js,json}\"",
+    "lint": "eslint \"{.,cypress,scripts}/**/*.{ts,js}\"",
+    "cy:open": "cypress open --e2e",
+    "cy:run": "cypress run --e2e --headless",
+    "cy:run:chrome": "yarn cy:run --browser chrome",
+    "cy:run:firefox": "yarn cy:run --browser firefox",
+    "cy:run:edge": "yarn cy:run --browser edge",
+    "cy:run-all": "yarn cy:run:chrome && yarn cy:run:firefox && yarn cy:run:edge",
+    "cy:visual": "yarn clean:diff && yarn cy:run --env 'TAGS=@visual and not @ignore'",
+    "cy:visual:update": "yarn cy:run --env 'TAGS=@visual and not @ignore,updateSnapshots=true'",
+    "report": "ts-node ./scripts/multiple-cucumber-html-reporter"
+  },
+  "author": "Nicolas Legeay",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@simonsmith/cypress-image-snapshot": "^9.0.2",
+    "@types/node": "^18.19.26",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "axe-core": "^4.9.0",
+    "cypress": "^13.7.3",
+    "cypress-axe": "^1.5.0",
+    "cypress-plugin-api": "^2.11.1",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^2.15.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-typescript-sort-keys": "^3.2.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

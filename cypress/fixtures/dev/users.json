@@ -1,0 +1,18 @@
+[
+  {
+    "descriptions": ["administrateur"],
+    "username": "admin",
+    "password": "password",
+    "firstname": "Thomas",
+    "lastname": "Slater",
+    "phone": "01234567891",
+    "email": "admin@automationintesting.online"
+  },
+  {
+    "descriptions": ["default", "client"],
+    "firstname": "Clarissa",
+    "lastname": "Wolf",
+    "phone": "02234567891",
+    "email": "clarissa@yopmail.com"
+  }
+]
